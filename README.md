@@ -1,6 +1,10 @@
 # EVRO Docs
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Evro is an open-source protocol deployed on Gnosis that enables you to CREATE, MANAGE AND BALANCE COLLATERALIZED VAULTS without issuers, custodians, or intermediaries. Built on Liquity V2 principles, Evro operates through fully decentralized smart contracts with no administrative control and no upgrade authority.\
+\
+By aligning incentives among vault creators, liquidators, and integrators, the system sustains value stability through transparent, trustless automation.
+
+Decentralized design ensures that once deployed, the protocol operates independently. Evro is governed by code, not counterparties.
 
 ## Installation
 
