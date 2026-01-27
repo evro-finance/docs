@@ -72,7 +72,7 @@ A liquidated borrower usually incurs a penalty of 5% and will be able to claim t
 - <mark>For ETH, the loss amounts to 10% of the debt (at most). That corresponds to a max. loss of 9.09% expressed in terms of collateral.</mark>
 - <mark>For rETH/wstETH the loss is 20% of the debt, corresponding to a max. loss of 16.67% expressed in terms of collateral. - THESE DON'T APPLY, BUT DO WE HAVE ANY SPECIAL CONDITIONS WE WANNA ADDRESS HERE?</mark>
 
-![Chart](https://github.com/user-attachments/assets/4a46b158-c13c-47b5-8e8e-bf4fc3128ab5)
+![Liquidation](/img/liquidation.png)
 
 #### How am I compensated for liquidating a Trove? <a href="#how-am-i-compensated-for-liquidating-a-trove" id="how-am-i-compensated-for-liquidating-a-trove"></a>
 
@@ -126,7 +126,7 @@ Since redemptions are performed in ascending order of interest rate (for the res
 
 You can see the distribution of other users' rates in a histogram and position yourself accordingly.
 
-![Rate](https://github.com/user-attachments/assets/2dd663be-fae8-4290-9d60-0d5f7f71089a)
+![Rate](/img/interest_rate.png)
 
 <mark>IMAGE TO BE UPDATED HERE</mark> \
 Redemptions usually occur when EVRO is trading below 1 EUR minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection. <mark>LINK AND IMAGE TO BE UPDATED HERE</mark>&#x20;
@@ -148,7 +148,7 @@ There are two key parameters to consider:
 
 You have the flexibility to set these parameters as you see fit, allowing you to control the relative riskiness of each Trove. You can create multiple Troves under the same address, enabling you to manage different risk profiles for different portions of your portfolio.
 
-![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FPtoSsrpN4nxIZviPrc1s%252FLoan%2520personas.png%3Falt%3Dmedia%26token%3D649cb0e4-eb3e-44e4-8fe6-4432dbaed967&width=768&dpr=4&quality=100&sign=bb12995f&sv=2)
+![](/img/risk_personas.png)
 
 <mark>IMAGE TO BE UPDATED HERE</mark>&#x20;
 
