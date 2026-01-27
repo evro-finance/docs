@@ -31,7 +31,7 @@ When EVRO trades above 1 EUR, borrowers tend to reduce their rates due to lower 
 
 In contrast, when EVRO trades below 1.00 EUR, arbitrageurs will initiate redemptions to restore the peg. Borrowers' exposure to redemption risk prompts them to increase interest rates, boosting demand for EUR (and Earn deposits) and pushing its price upward.
 
-![USND Price Chart](https://github.com/user-attachments/assets/b78b6905-618a-4a79-aad6-92a8ae12f017)
+![Price Cycle](/img/price_cycle.png)
 
 <mark>IMAGE TO BE UPDATED HERE</mark>&#x20;
 

@@ -12,7 +12,7 @@ A redemption is essentially swapping EVRO for each collateral at face value, as 
 
 The redeemer sends EVRO to the protocol and in return gets a mix of collateral tokens redeemed (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#how-is-the-collateral-split-determined) for more info). <mark>INTERNAL LINK TO UPDATE HERE.</mark>&#x20;
 
-![Redeption](https://github.com/user-attachments/assets/c0548fbc-e4af-4713-a5d6-1b9ac1e828b9)
+![Redeption](/img/redemption_1.png)
 
 <mark>IMAGE TO UPDATE HERE</mark>\
 \
@@ -57,7 +57,7 @@ The process starts with the Troves paying the lowest interest rates in each coll
 
 <mark>In this example, the wstETH market shows a full redemption of the first Trove and a partial redemption of the second. The wstETH and ETH markets have one partial and two full redemptions, respectively UPDATE THIS TEXT TO MATCH THE UPDATED IMAGE BELOW, LET'S USE GNO RELATED EXAMPLES</mark>
 
-![Redeemer 1](https://github.com/user-attachments/assets/925f3ab0-ecd9-48d7-8263-cb5dd4bf2f7a)
+![Redeemer 1](/img/redemption_2.png)
 
 <mark>IMAGE TO UPDATE HERE</mark>
 
@@ -69,7 +69,7 @@ To mitigate this risk, the system redeems proportionally to the "outside debt" o
 
 Here is an example: given outside debt amounts of 100 EVRO, 50 EVRO and 100 EVRO respectively, a redemption will result in a <mark>40% (WETH), 20% (wstETH) and 40% (rETH) split. ELECT WHICH COLLATERALS TO USE HERE</mark>
 
-![Redeemer 2](https://github.com/user-attachments/assets/71008643-ae18-47cb-97bf-613293fe9e05)
+![Redeemer 2](/img/redemption_3.png)
 
 <mark>IMAGE TO UPDATE HERE</mark>
 
@@ -83,7 +83,7 @@ Upon each redemption of x EVRO: `baseRate` is decayed based on time passed since
 
 The redemption fee percentage is given by `min (0.5% + baseRate, 100%)`.
 
-<figure><img src="https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FoS6SRJ41pw82HYtf9Wd2%252Fredem.png%3Falt%3Dmedia%26token%3D244f49b2-3587-4d26-bb9e-b90b9713361d&#x26;width=768&#x26;dpr=4&#x26;quality=100&#x26;sign=59cf6c&#x26;sv=2" alt="" /><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
+<figure><img src="/img/dune_dashboard.png" alt="" /><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
 
 <mark>IMAGE DOESN'T NEED FULL UPDATE, BUT PUTTING SOME BRANDING ON IT WOULD BE NICE</mark>
 
@@ -95,7 +95,7 @@ The risk of redemption depends on two factors: the interest rate you set and the
 
 You can see this in the frontend, in the example below the number is 352k
 
-![Rate](https://github.com/user-attachments/assets/76db77d7-38c2-493f-94e8-83ec8ccf1629)
+![Rate](/img/interest_rate.png)
 
 <mark>IMAGE TO UPDATE HERE - we don't have rate management</mark>\
 \
@@ -140,7 +140,7 @@ spender to `CollateralRegistry address`and the amount to be at least as high as 
 
 **Example for 1000 EVRO:**
 
-![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FyfWVv0gTWqCfg3YWYder%252Fred1.png%3Falt%3Dmedia%26token%3Dc05978b8-7946-4828-b81c-e7256bfeb0ce&width=768&dpr=4&quality=100&sign=b9753e68&sv=2)
+![](/img/approve.png)
 
 <mark>IMAGE TO UPDATE HERE - Let's be cool and have the actual address + brand it nice and cute</mark>\
 \
@@ -162,6 +162,6 @@ Note: The redemption fee must be higher than the current fee.
 \
 <mark>CODE TEXT HERE MENTIONS BOLD - I IMAGINE WE HAVE TO CHANGE IT</mark>
 
-![](https://docs.liquity.org/~gitbook/image?url=https%3A%2F%2F2342324437-files.gitbook.io%2F%7E%2Ffiles%2Fv0%2Fb%2Fgitbook-x-prod.appspot.com%2Fo%2Fspaces%252FE2A1Xrcj7XasxOiotWky%252Fuploads%252FcVvVXORMhz0UPk0QHMW0%252Fred2.png%3Falt%3Dmedia%26token%3Dd1be9844-ce90-415a-b35e-a276003532ce&width=768&dpr=4&quality=100&sign=9a897da2&sv=2)
+![](/img/redeem.png)
 
 <mark>IMAGE TO UPDATE HERE - Let's be cool and have the actual NAMES + brand it nice and cute</mark>
