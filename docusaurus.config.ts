@@ -10,56 +10,43 @@ const config: Config = {
     "An open-source protocol that maintains synthetic value units through fully decentralized smart-contract mechanics.",
   favicon: "img/favicon.ico",
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
   url: "https://app.evro.finance",
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
   baseUrl: "/",
-
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  // organizationName: "facebook", // Usually your GitHub org/user name.
-  // projectName: "docusaurus", // Usually your repo name.
 
   onBrokenLinks: "throw",
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
 
- presets: [
-  [
-    "classic",
-    {
-      docs: {
-        routeBasePath: "/",               // 👈 serve docs at root
-        sidebarPath: "./sidebars.ts",
-        editUrl: "https://github.com/evro-finance/docs",
-      },
-      blog: false,
-      pages: false,                       // 👈 disable homepage system
-      theme: {
-        customCss: "./src/css/custom.css",
-      },
-    } satisfies Preset.Options,
+  presets: [
+    [
+      "classic",
+      {
+        docs: {
+          routeBasePath: "/", // docs live at root
+          sidebarPath: "./sidebars.ts",
+          editUrl: "https://github.com/evro-finance/docs",
+        },
+        blog: false,
+        pages: false, // disable Docusaurus pages (kills homepage)
+        theme: {
+          customCss: "./src/css/custom.css",
+        },
+      } satisfies Preset.Options,
+    ],
   ],
-],
 
   themeConfig: {
-    // Replace with your project's social card
-    // image: "img/docusaurus-social-card.jpg",
     colorMode: {
       respectPrefersColorScheme: true,
     },
+
     navbar: {
       title: "EVRO Finance Docs",
       logo: {
@@ -80,6 +67,7 @@ const config: Config = {
         },
       ],
     },
+
     footer: {
       style: "dark",
       links: [
@@ -88,25 +76,8 @@ const config: Config = {
           items: [
             {
               label: "Docs",
-              to: "/docs/user-docs/general",
+              to: "/user-docs/general", // ✅ FIXED (removed /docs)
             },
-          ],
-        },
-        {
-          title: "Community",
-          items: [
-            // {
-            //   label: "Stack Overflow",
-            //   href: "https://stackoverflow.com/questions/tagged/docusaurus",
-            // },
-            // {
-            //   label: "Discord",
-            //   href: "https://discordapp.com/invite/docusaurus",
-            // },
-            // {
-            //   label: "X",
-            //   href: "https://x.com/docusaurus",
-            // },
           ],
         },
         {
@@ -119,8 +90,8 @@ const config: Config = {
           ],
         },
       ],
-      // copyright: `Copyright © ${new Date().getFullYear()} EVRO Finance. Built with Docusaurus.`,
     },
+
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
