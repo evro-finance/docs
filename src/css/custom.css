@@ -108,3 +108,34 @@
 }
 
 /* === end EVRO Docs – sidebar hierarchy === */
+
+/* === EVRO Docs – Sidebar depth  === */
+
+/* Sidebar background */
+.theme-doc-sidebar-container {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+/* Dark mode */
+[data-theme="dark"] .theme-doc-sidebar-container {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* === end Sidebar depth === */
+
+/* Main content subtle separation */
+.theme-doc-main {
+  background-color: var(--ifm-background-surface-color);
+}
+
+:root {
+  /* Light mode surfaces */
+  --ifm-background-color: #f4f3f8;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Text */
+  --ifm-font-color-base: #1e1f26;
+
+  /* Borders & dividers */
+  --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
+}
