@@ -4,31 +4,46 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* === EVRO Docs – Brand-aligned color palette === */
+
 :root {
-  --ifm-color-primary: #ff0000;
-  --ifm-color-primary-dark: #702ed3;
-  --ifm-color-primary-darker: #4f2191;
-  --ifm-color-primary-darkest: #301362;
-  --ifm-color-primary-light: #c6b8fa;
-  --ifm-color-primary-lighter: #dfd7fd;
-  --ifm-color-primary-lightest: #f5f3ff;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Base text & surfaces */
+  --ifm-font-color-base: #1c1f26;
+  --ifm-background-color: #faf9fd;
+
+  /* Primary (EVRO lavender) */
+  --ifm-color-primary: #8b6cf6;
+  --ifm-color-primary-dark: #7557dd;
+  --ifm-color-primary-darker: #6449c4;
+  --ifm-color-primary-light: #a58cf9;
+  --ifm-color-primary-lighter: #c3b6fc;
+  --ifm-color-primary-lightest: #e6e1ff;
+
+  /* Secondary / warm accent (EVRO coral) */
+  --ifm-color-secondary: #f28b7a;
+
+  /* Borders & dividers */
+  --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode */
 [data-theme="dark"] {
-  --ifm-color-primary: #757ba3;
-  --ifm-color-primary-dark: #702ed3;
-  --ifm-color-primary-darker: #4f2191;
-  --ifm-color-primary-darkest: #301362;
-  --ifm-color-primary-light: #c6b8fa;
-  --ifm-color-primary-lighter: #dfd7fd;
-  --ifm-color-primary-lightest: #f5f3ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-font-color-base: #e6e7eb;
+  --ifm-background-color: #0f1117;
+
+  --ifm-color-primary: #9d86ff;
+  --ifm-color-primary-dark: #846cf2;
+  --ifm-color-primary-darker: #735ae0;
+  --ifm-color-primary-light: #b3a0ff;
+  --ifm-color-primary-lighter: #cdc2ff;
+  --ifm-color-primary-lightest: #ebe8ff;
+
+  --ifm-color-secondary: #f2a08f;
+
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
 }
 
+/* === end EVRO Docs – Brand-aligned color palette === */
 
 /* === EVRO Docs – readability pass === */
 
