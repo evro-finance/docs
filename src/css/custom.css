@@ -1,30 +1,154 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global styles for EVRO Docs
+ * Built on Docusaurus + Infima
  */
 
-/* You can override the default Infima variables here. */
+/* === Color palette === */
+
 :root {
-  --ifm-color-primary: #757ba3;
-  --ifm-color-primary-dark: #702ed3;
-  --ifm-color-primary-darker: #4f2191;
-  --ifm-color-primary-darkest: #301362;
-  --ifm-color-primary-light: #c6b8fa;
-  --ifm-color-primary-lighter: #dfd7fd;
-  --ifm-color-primary-lightest: #f5f3ff;
-  --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  /* Base surfaces */
+  --ifm-background-color: #f4f3f8;
+  --ifm-background-surface-color: #ffffff;
+
+  /* Text */
+  --ifm-font-color-base: #1e1f26;
+
+  /* Primary accent (EVRO lavender) */
+  --ifm-color-primary: #8b6cf6;
+  --ifm-color-primary-dark: #7557dd;
+  --ifm-color-primary-darker: #6449c4;
+  --ifm-color-primary-light: #a58cf9;
+  --ifm-color-primary-lighter: #c3b6fc;
+  --ifm-color-primary-lightest: #e6e1ff;
+
+  /* Secondary accent (EVRO coral) */
+  --ifm-color-secondary: #f28b7a;
+
+  /* Borders & dividers */
+  --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Dark mode palette */
 [data-theme="dark"] {
-  --ifm-color-primary: #757ba3;
-  --ifm-color-primary-dark: #702ed3;
-  --ifm-color-primary-darker: #4f2191;
-  --ifm-color-primary-darkest: #301362;
-  --ifm-color-primary-light: #c6b8fa;
-  --ifm-color-primary-lighter: #dfd7fd;
-  --ifm-color-primary-lightest: #f5f3ff;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-background-color: #0f1117;
+  --ifm-background-surface-color: #14161d;
+
+  --ifm-font-color-base: #e6e7eb;
+
+  --ifm-color-primary: #9d86ff;
+  --ifm-color-primary-dark: #846cf2;
+  --ifm-color-primary-darker: #735ae0;
+  --ifm-color-primary-light: #b3a0ff;
+  --ifm-color-primary-lighter: #cdc2ff;
+  --ifm-color-primary-lightest: #ebe8ff;
+
+  --ifm-color-secondary: #f2a08f;
+
+  --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
 }
+
+/* === Typography === */
+
+:root {
+  /* Body text */
+  --ifm-font-size-base: 16.5px;
+  --ifm-line-height-base: 1.75;
+  --ifm-font-weight-base: 400;
+
+  /* Headings */
+  --ifm-heading-font-weight: 650;
+  --ifm-heading-line-height: 1.25;
+
+  /* ~10% smaller, more architectural */
+  --ifm-h1-font-size: 2.025rem;
+  --ifm-h2-font-size: 1.53rem;
+  --ifm-h3-font-size: 1.215rem;
+  --ifm-h4-font-size: 1rem;
+
+  --ifm-paragraph-margin-bottom: 1.15rem;
+
+  /* Content width */
+  --ifm-container-width: 1140px;
+  --ifm-container-width-xl: 1140px;
+}
+
+/* Heading styling */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.markdown h1,
+.markdown h2 {
+  letter-spacing: 0.035em;
+}
+
+/* === Sidebar === */
+
+/* Section titles */
+.menu__list-item-collapsible > .menu__link {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  opacity: 0.9;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Section dividers */
+.menu__list-item-collapsible {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  margin-top: 1rem;
+}
+
+/* Page links */
+.menu__link {
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ifm-font-color-base);
+}
+
+/* Active / hover */
+.menu__link--active,
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+/* Caret subtlety */
+.menu__caret {
+  opacity: 0.6;
+}
+
+/* Sidebar depth */
+.theme-doc-sidebar-container {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+[data-theme="dark"] .theme-doc-sidebar-container {
+  background-color: rgba(255, 255, 255, 0.03);
+}
+
+/* === Layout & surfaces === */
+
+/* Main content */
+.theme-doc-main {
+  background-color: var(--ifm-background-surface-color);
+}
+
+/* Navbar & cards */
+.navbar,
+.card {
+  background-color: var(--ifm-background-surface-color);
+}
+
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .card {
+  background-color: #14161d;
+}
+
