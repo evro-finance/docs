@@ -1,17 +1,19 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * Global styles for EVRO Docs
+ * Built on Docusaurus + Infima
  */
 
-/* === EVRO Docs – Brand-aligned color palette === */
+/* === Color palette === */
 
 :root {
-  /* Base text & surfaces */
-  --ifm-font-color-base: #1c1f26;
-  --ifm-background-color: #faf9fd;
+  /* Base surfaces */
+  --ifm-background-color: #f4f3f8;
+  --ifm-background-surface-color: #ffffff;
 
-  /* Primary (EVRO lavender) */
+  /* Text */
+  --ifm-font-color-base: #1e1f26;
+
+  /* Primary accent (EVRO lavender) */
   --ifm-color-primary: #8b6cf6;
   --ifm-color-primary-dark: #7557dd;
   --ifm-color-primary-darker: #6449c4;
@@ -19,17 +21,19 @@
   --ifm-color-primary-lighter: #c3b6fc;
   --ifm-color-primary-lightest: #e6e1ff;
 
-  /* Secondary / warm accent (EVRO coral) */
+  /* Secondary accent (EVRO coral) */
   --ifm-color-secondary: #f28b7a;
 
   /* Borders & dividers */
   --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
 }
 
-/* Dark mode */
+/* Dark mode palette */
 [data-theme="dark"] {
-  --ifm-font-color-base: #e6e7eb;
   --ifm-background-color: #0f1117;
+  --ifm-background-surface-color: #14161d;
+
+  --ifm-font-color-base: #e6e7eb;
 
   --ifm-color-primary: #9d86ff;
   --ifm-color-primary-dark: #846cf2;
@@ -43,34 +47,48 @@
   --ifm-toc-border-color: rgba(255, 255, 255, 0.12);
 }
 
-/* === end EVRO Docs – Brand-aligned color palette === */
-
-/* === EVRO Docs – readability pass === */
+/* === Typography === */
 
 :root {
-  /* Base text */
-  --ifm-font-size-base: 17px;
-  --ifm-line-height-base: 1.7;
+  /* Body text */
+  --ifm-font-size-base: 16.5px;
+  --ifm-line-height-base: 1.75;
+  --ifm-font-weight-base: 400;
 
   /* Headings */
-  --ifm-heading-font-weight: 600;
-  --ifm-h1-font-size: 2.1rem;
-  --ifm-h2-font-size: 1.6rem;
-  --ifm-h3-font-size: 1.25rem;
+  --ifm-heading-font-weight: 650;
+  --ifm-heading-line-height: 1.25;
+
+  /* ~10% smaller, more architectural */
+  --ifm-h1-font-size: 2.025rem;
+  --ifm-h2-font-size: 1.53rem;
+  --ifm-h3-font-size: 1.215rem;
+  --ifm-h4-font-size: 1rem;
+
+  --ifm-paragraph-margin-bottom: 1.15rem;
 
   /* Content width */
   --ifm-container-width: 1140px;
   --ifm-container-width-xl: 1140px;
-
-  /* Vertical rhythm */
-  --ifm-paragraph-margin-bottom: 1.1rem;
 }
 
-/* === end EVRO Docs – readability pass === */
+/* Heading styling */
+.markdown h1,
+.markdown h2,
+.markdown h3,
+.markdown h4 {
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
 
-/* === EVRO Docs – sidebar hierarchy === */
+.markdown h1,
+.markdown h2 {
+  letter-spacing: 0.035em;
+}
 
-/* Sidebar section titles (USER GUIDES, DEVELOPERS, etc.) */
+/* === Sidebar === */
+
+/* Section titles */
 .menu__list-item-collapsible > .menu__link {
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -82,93 +100,54 @@
   padding-bottom: 0.5rem;
 }
 
-/* Divider under each section title */
+/* Section dividers */
 .menu__list-item-collapsible {
   border-top: 1px solid var(--ifm-toc-border-color);
   margin-top: 1rem;
 }
 
-/* Regular page links */
+/* Page links */
 .menu__link {
   text-transform: none;
   font-weight: 400;
   color: var(--ifm-font-color-base);
 }
 
-/* Active / hovered page */
+/* Active / hover */
 .menu__link--active,
 .menu__link:hover {
   color: var(--ifm-color-primary);
   font-weight: 500;
 }
 
-/* Reduce visual noise from nested arrows */
+/* Caret subtlety */
 .menu__caret {
   opacity: 0.6;
 }
 
-/* === end EVRO Docs – sidebar hierarchy === */
-
-/* === EVRO Docs – Sidebar depth  === */
-
-/* Sidebar background */
+/* Sidebar depth */
 .theme-doc-sidebar-container {
   background-color: rgba(0, 0, 0, 0.03);
 }
 
-/* Dark mode */
 [data-theme="dark"] .theme-doc-sidebar-container {
   background-color: rgba(255, 255, 255, 0.03);
 }
 
-/* === end Sidebar depth === */
+/* === Layout & surfaces === */
 
-/* Main content subtle separation */
+/* Main content */
 .theme-doc-main {
   background-color: var(--ifm-background-surface-color);
 }
 
-:root {
-  /* Light mode surfaces */
-  --ifm-background-color: #f4f3f8;
-  --ifm-background-surface-color: #ffffff;
-
-  /* Text */
-  --ifm-font-color-base: #1e1f26;
-
-  /* Borders & dividers */
-  --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
-}
-/* === EVRO Docs – Typography & proportions === */
-
-:root {
-  /* Body text */
-  --ifm-font-size-base: 16.5px;
-  --ifm-line-height-base: 1.75;
-  --ifm-font-weight-base: 400;
-
-  /* Headings – closer to EVRO site proportions */
-  --ifm-heading-font-weight: 650;
-  --ifm-heading-line-height: 1.25;
-
-  --ifm-h1-font-size: 2.25rem;
-  --ifm-h2-font-size: 1.7rem;
-  --ifm-h3-font-size: 1.35rem;
-  --ifm-h4-font-size: 1.1rem;
-
-  /* Spacing */
-  --ifm-paragraph-margin-bottom: 1.15rem;
+/* Navbar & cards */
+.navbar,
+.card {
+  background-color: var(--ifm-background-surface-color);
 }
 
-/* Improve heading tracking slightly */
-.markdown h1,
-.markdown h2 {
-  letter-spacing: -0.015em;
+[data-theme="dark"] .navbar,
+[data-theme="dark"] .card {
+  background-color: #14161d;
 }
-
-.markdown h3,
-.markdown h4 {
-  letter-spacing: -0.01em;
-}
-
-/* === end EVRO Docs – Typography & proportions === */
