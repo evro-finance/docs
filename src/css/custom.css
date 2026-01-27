@@ -52,3 +52,44 @@
 }
 
 /* === end EVRO Docs – readability pass === */
+
+/* === EVRO Docs – sidebar hierarchy === */
+
+/* Sidebar section titles (USER GUIDES, DEVELOPERS, etc.) */
+.menu__list-item-collapsible > .menu__link {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  opacity: 0.9;
+  padding-top: 1.25rem;
+  padding-bottom: 0.5rem;
+}
+
+/* Divider under each section title */
+.menu__list-item-collapsible {
+  border-top: 1px solid var(--ifm-toc-border-color);
+  margin-top: 1rem;
+}
+
+/* Regular page links */
+.menu__link {
+  text-transform: none;
+  font-weight: 400;
+  color: var(--ifm-font-color-base);
+}
+
+/* Active / hovered page */
+.menu__link--active,
+.menu__link:hover {
+  color: var(--ifm-color-primary);
+  font-weight: 500;
+}
+
+/* Reduce visual noise from nested arrows */
+.menu__caret {
+  opacity: 0.6;
+}
+
+/* === end EVRO Docs – sidebar hierarchy === */
