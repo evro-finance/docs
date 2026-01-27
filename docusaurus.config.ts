@@ -32,7 +32,7 @@ const config: Config = {
       {
         docs: {
           routeBasePath: "/", // docs live at root
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: require.resolve("./sidebars.ts"),
           editUrl: "https://github.com/evro-finance/docs",
         },
         blog: false,
