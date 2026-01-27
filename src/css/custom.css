@@ -28,3 +28,27 @@
   --ifm-color-primary-lightest: #f5f3ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+/* === EVRO Docs – readability pass === */
+
+:root {
+  /* Base text */
+  --ifm-font-size-base: 17px;
+  --ifm-line-height-base: 1.7;
+
+  /* Headings */
+  --ifm-heading-font-weight: 600;
+  --ifm-h1-font-size: 2.1rem;
+  --ifm-h2-font-size: 1.6rem;
+  --ifm-h3-font-size: 1.25rem;
+
+  /* Content width */
+  --ifm-container-width: 1140px;
+  --ifm-container-width-xl: 1140px;
+
+  /* Vertical rhythm */
+  --ifm-paragraph-margin-bottom: 1.1rem;
+}
+
+/* === end EVRO Docs – readability pass === */
