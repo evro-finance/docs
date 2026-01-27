@@ -139,3 +139,36 @@
   /* Borders & dividers */
   --ifm-toc-border-color: rgba(0, 0, 0, 0.08);
 }
+/* === EVRO Docs – Typography & proportions === */
+
+:root {
+  /* Body text */
+  --ifm-font-size-base: 16.5px;
+  --ifm-line-height-base: 1.75;
+  --ifm-font-weight-base: 400;
+
+  /* Headings – closer to EVRO site proportions */
+  --ifm-heading-font-weight: 650;
+  --ifm-heading-line-height: 1.25;
+
+  --ifm-h1-font-size: 2.25rem;
+  --ifm-h2-font-size: 1.7rem;
+  --ifm-h3-font-size: 1.35rem;
+  --ifm-h4-font-size: 1.1rem;
+
+  /* Spacing */
+  --ifm-paragraph-margin-bottom: 1.15rem;
+}
+
+/* Improve heading tracking slightly */
+.markdown h1,
+.markdown h2 {
+  letter-spacing: -0.015em;
+}
+
+.markdown h3,
+.markdown h4 {
+  letter-spacing: -0.01em;
+}
+
+/* === end EVRO Docs – Typography & proportions === */
