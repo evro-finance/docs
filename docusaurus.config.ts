@@ -36,22 +36,23 @@ const config: Config = {
     locales: ["en"],
   },
 
-  presets: [
-    [
-      "classic",
-      {
-        docs: {
-          sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl: "https://github.com/evro-finance/docs",
-        },
-        theme: {
-          customCss: "./src/css/custom.css",
-        },
-      } satisfies Preset.Options,
-    ],
+ presets: [
+  [
+    "classic",
+    {
+      docs: {
+        routeBasePath: "/",               // 👈 serve docs at root
+        sidebarPath: "./sidebars.ts",
+        editUrl: "https://github.com/evro-finance/docs",
+      },
+      blog: false,
+      pages: false,                       // 👈 disable homepage system
+      theme: {
+        customCss: "./src/css/custom.css",
+      },
+    } satisfies Preset.Options,
   ],
+],
 
   themeConfig: {
     // Replace with your project's social card
