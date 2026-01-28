@@ -36,6 +36,20 @@ const config: Config = {
     locales: ["en"],
   },
 
+  plugins: [
+    [
+      "@docusaurus/plugin-client-redirects",
+      {
+        redirects: [
+          {
+            from: "/",
+            to: "/docs/category/user-docs",
+          },
+        ],
+      },
+    ],
+  ],
+
   presets: [
     [
       "classic",
@@ -128,4 +142,3 @@ const config: Config = {
 };
 
 export default config;
-
