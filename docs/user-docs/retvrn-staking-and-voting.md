@@ -4,35 +4,91 @@ sidebar_position: 5
 
 # $RETVRN Staking & Voting
 
-<mark>warning - Make this a tip</mark>
+:::warning RETVRN Token Not Yet Available
+The RETVRN token is not yet live or available for trading. Be extremely cautious of any scams or fake tokens claiming to be RETVRN. Official announcements will be made through EVRO's verified channels only.
+:::
 
-RETVRN **token is not yet live or available. Be very diligent of scams.**
+## What is RETVRN?
 
-#### Guide to staking RETVRN tokens and participating in governance.
+RETVRN is the native governance token of the EVRO protocol. EVRO uses a Moloch DAO structure for governance, which is intentionally minimal to preserve the protocol's immutability and decentralization.
 
-RETVRN token will be the native governance token of the EVRO protocol.
+Unlike many DeFi protocols with expansive governance powers, RETVRN governance through the Moloch DAO is limited by design.
 
-**Holders will have the power to:**
+## Governance Powers
 
-1. Update (increase or decrease) the debt limits for each collateral type the system accepts. Setting the debt limit to 0 would essentially shutdown that collateral branch and only allow repayments.
-2. Direct 25% of interest payments which the protocol earns.
-3. Vote to control a shared treasury.
+RETVRN holders have **limited but important** governance capabilities:
 
-RETVRN holders do NOT have the power to:
+### What RETVRN Holders CAN Do:
 
-- Mint new EVRO or control user Troves.
-- Upgrade the protocol or change the rules.
-- Add new collateral types.
-- Change the split or behavior of protocol interest payment fees.
+1. **Adjust Debt Limits**
+   - Increase or decrease the maximum borrowable amount for each collateral type
+   - Can lower limits at any time
+   - Can only increase up to initial limit or 2x the current debt limit
+   - Setting debt limit to 0 effectively shuts down that collateral market (allows only repayments)
 
-### RETVRN Staking <a href="#evro-staking" id="evro-staking"></a>
+2. **Direct Protocol Revenue**
+   - Control allocation of 25% of protocol interest revenue
+   - Fund ecosystem initiatives and growth
+   - Support liquidity incentives and partnerships
 
-Coming Soon.
+3. **GNO Delegation**
+   - Vote on delegation of protocol-held GNO tokens
+   - GNO accumulated from osGNO collateral deposits
+   - Participate in Gnosis DAO governance
 
-### RETVRN Liquidity Incentive Gauges <a href="#evro-liquidity-incentive-gauges" id="evro-liquidity-incentive-gauges"></a>
+4. **Treasury Management**
+   - Oversee protocol-owned liquidity (POL)
+   - Fund development and security initiatives
+   - Support community programs
 
-Coming soon.
+### What RETVRN Holders CANNOT Do:
 
-### RETVRN Treasury & Protocol Owned Liquidity <a href="#evro-treasury--protocol-owned-liquidity" id="evro-treasury--protocol-owned-liquidity"></a>
+EVRO's governance has strict limitations to protect users:
 
-Coming soon.
+- ❌ **Cannot mint EVRO** or control user Troves
+- ❌ **Cannot upgrade** protocol contracts (immutable)
+- ❌ **Cannot add** new collateral types
+- ❌ **Cannot change** interest rate mechanisms
+- ❌ **Cannot modify** the 75/25 fee split to Stability Pools
+- ❌ **Cannot alter** liquidation parameters (MCR, CCR, penalties)
+- ❌ **Cannot change** core protocol logic
+
+## RETVRN Staking <a href="#retvrn-staking" id="retvrn-staking"></a>
+
+**Status**: Coming Soon
+
+The Moloch DAO governance structure will enable RETVRN holders to:
+- Vote on governance proposals
+- Receive revenue share from the 25% of protocol fees directed to governance
+- Direct Protocol Liquidity Incentives (PLI)
+- Participate in treasury management
+
+Details on the Moloch DAO implementation, RETVRN token mechanics, and governance participation will be announced when the token launches.
+
+## Protocol Liquidity Incentives (PLI) <a href="#protocol-liquidity-incentives" id="protocol-liquidity-incentives"></a>
+
+**Status**: Coming Soon
+
+Through the Moloch DAO, RETVRN holders will be able to vote on:
+- Which liquidity pools receive incentives
+- Allocation of protocol revenue across initiatives
+- Support for key trading pairs (EVRO/xDAI, EVRO/USDC, etc.)
+- Community proposals and ecosystem development
+
+This system will allow the community to direct the 25% governance-controlled revenue where it's most valuable for the protocol.
+
+## Treasury & Protocol Owned Liquidity <a href="#treasury-protocol-owned-liquidity" id="treasury-protocol-owned-liquidity"></a>
+
+**Status**: Coming Soon
+
+The EVRO treasury will:
+- Hold protocol-owned liquidity (POL) in key trading pairs
+- Fund ongoing development and audits
+- Support ecosystem growth initiatives
+- Maintain a sustainability fund for long-term protocol health
+
+The Moloch DAO will have oversight of treasury spending and allocation decisions, directing the governance-controlled portion of protocol revenue to maximize value for EVRO users and RETVRN holders.
+
+## Token Distribution
+
+Details on RETVRN token distribution, supply, and launch mechanics will be announced closer to the token's release. Follow EVRO's official channels for updates.
