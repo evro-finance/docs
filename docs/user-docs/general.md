@@ -42,7 +42,7 @@ Governance will **never** be able to change the fee split, update core protocol 
 
 #### Other Helpful Resources:
 
-- **Frontend**: [evro.finance](https://evro.finance)
-- **GitHub**: [github.com/raidguild/evro](https://github.com/raidguild/evro)
+- **Frontend**: [evro.finance](https://app.evro.finance/)
+- **GitHub**: [github.com/raidguild/evro](https://github.com/evro-finance/evro)
 - **Dune Dashboard**: Coming soon
 - **Subgraph**: Coming soon

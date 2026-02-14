@@ -63,7 +63,7 @@ The split is dynamic, optimizing for the economic safety of the system. The logi
 
 To mitigate this risk, the system redeems proportionally to the "outside debt" of each collateral type. This is calculated as the total debt borrowed against a specific collateral minus the size of the Stability Pool for that borrowing market.
 
-Here is an example: given outside debt amounts of 100 EVRO (WXDAI), 50 EVRO (GNO), and 100 EVRO (sDAI) respectively, a redemption will result in a 40% WXDAI, 20% GNO, and 40% sDAI split.
+Here is an example: given outside debt amounts of 100 EVRO (WXDAI), 50 EVRO (GNO), and 100 EVRO (osGNO) respectively, a redemption will result in a 40% WXDAI, 20% GNO, and 40% osGNO split.
 
 ![Redeemer 2](/img/redemption_3.png)
 

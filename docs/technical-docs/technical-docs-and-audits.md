@@ -11,8 +11,8 @@ sidebar_position: 1
 ## Code Base
 
 **EVRO Protocol:**
-- [EVRO Core Repository](https://github.com/evro-finance/evro) - Main protocol contracts
-- [EVRO Frontend](https://github.com/evro-finance/evro) - User interface
+- [EVRO Core Repository](https://github.com/evro-finance/evro/tree/main/contracts) - Main protocol contracts
+- [EVRO Frontend](https://github.com/evro-finance/evro/tree/main/frontend) - User interface
 
 **Liquity v2 (Base Protocol):**
 - [BOLD Core](https://github.com/liquity/bold) - Base protocol EVRO is forked from
