@@ -76,11 +76,13 @@ If a Stability Pool doesn't have enough EVRO to cover a liquidation, the system 
 A liquidated borrower incurs a liquidation penalty and can claim any remaining collateral after liquidation. The penalty depends on the liquidation method:
 
 **Stability Pool Liquidation** (most common):
+
 - **5% penalty** for all collateral types
 - Your debt is paid off by the Stability Pool
 - Remaining collateral (minus penalty) is claimable
 
 **Redistribution** (fallback when Stability Pool is empty):
+
 - **10% penalty** for xDAI, GNO, sDAI, osGNO, and wBTC
 - **20% penalty** for wstETH
 - Your debt and collateral are redistributed among other borrowers in the same market
@@ -113,9 +115,10 @@ Check out the full [Collateral Parameters](../technical-docs/technical-docs-and-
 
 #### What is the refundable gas deposit? <a href="#what-is-the-refundable-gas-deposit" id="what-is-the-refundable-gas-deposit"></a>
 
-To open a new Trove, the protocol requires a liquidation reserve of **3.5 xDAI** regardless of the chosen collateral. This deposit is set aside to compensate liquidators for the gas costs of a potential liquidation. 
+To open a new Trove, the protocol requires a liquidation reserve of **3.5 xDAI** regardless of the chosen collateral. This deposit is set aside to compensate liquidators for the gas costs of a potential liquidation.
 
 The deposit is:
+
 - **Returned** when you close your Trove normally (including upon redemptions)
 - **Given to the liquidator** if your Trove gets liquidated
 
@@ -133,7 +136,7 @@ On Evro, users set their own interest rates, giving them full control over costs
 
 User-set interest rates facilitate a capital-efficient equilibrium between EVRO borrowers and holders in a fully market-driven manner. Additionally, these rates serve as the primary revenue source for EVRO holders, generating a continuous, sustainable real yield for EVRO depositors and liquidity providers.
 
-Borrowers should set their rates based on their [redemption](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#what-are-redemptions) risk tolerance. <mark>LINKs TO BE UPDATED HERE</mark>&#x20;
+Borrowers should set their rates based on their [redemption](/docs/user-docs/redemptions-and-delegation#what-are-redemptions) risk tolerance.
 
 Read more about setting your rates [here](https://www.liquity.org/blog/interest-rate-management-in-liquity-v2).
 
@@ -157,8 +160,7 @@ You can see the distribution of other users' rates in a histogram and position y
 
 ![Rate](/img/interest_rate.png)
 
-<mark>IMAGE TO BE UPDATED HERE</mark> \
-Redemptions usually occur when EVRO is trading below 1 EUR minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection. <mark>LINK AND IMAGE TO BE UPDATED HERE</mark>&#x20;
+Redemptions usually occur when EVRO is trading below 1 EUR minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection. <mark>LINK TO BE UPDATED HERE</mark>&#x20;
 
 In general, those willing to actively monitor their positions, or borrowing for shorter periods of time, may opt for lower rates. Conversely users optimizing for a more passive, long-term position would be better off with setting a higher relative interest rate.
 
@@ -172,14 +174,12 @@ Given that 75% of the interest revenue is directly paid out to EVRO depositors, 
 
 There are two key parameters to consider:
 
-- **Loan-to-value (LTV)**: This is based on your debt-to-collateral ratio and affects your risk of [liquidation](https://docs.evro.finance/docs/user-docs/borrowing-and-liquidations#how-do-liquidations-work-in-evro). <mark>INTERNAL LINK TO BE UPDATED HERE</mark>&#x20;
-- **Interest rate (IR)**: You set this rate yourself, and it influences your risk of being [redeemed](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#what-are-redemptions). <mark>INTERNAL LINK TO BE UPDATED HERE</mark>&#x20;
+- **Loan-to-value (LTV)**: This is based on your debt-to-collateral ratio and affects your risk of [liquidation](/docs/user-docs/borrowing-and-liquidations#how-do-liquidations-work-in-evro).
+- **Interest rate (IR)**: You set this rate yourself, and it influences your risk of being [redeemed](/docs/user-docs/redemptions-and-delegation#what-are-redemptions).
 
 You have the flexibility to set these parameters as you see fit, allowing you to control the relative riskiness of each Trove. You can create multiple Troves under the same address, enabling you to manage different risk profiles for different portions of your portfolio.
 
 ![](/img/risk_personas.png)
-
-<mark>IMAGE TO BE UPDATED HERE</mark>&#x20;
 
 #### Are there any other fees related to borrowing? <a href="#are-there-any-other-fees-related-to-borrowing" id="are-there-any-other-fees-related-to-borrowing"></a>
 
@@ -254,6 +254,7 @@ EVRO uses a special wrapper contract for wBTC to handle the decimal conversion b
 4. **Zapper Contract**: The `wbtcZapper` (`0x5c77c09701b8c450d14c29d932280311935f5299`) provides additional convenience functions for one-transaction operations like opening a Trove and borrowing in a single step.
 
 **Why this matters:**
+
 - You only ever interact with standard wBTC tokens
 - The protocol can maintain consistent 18-decimal precision internally
 - All conversions happen automatically and trustlessly
@@ -276,6 +277,7 @@ When you deposit GNO or osGNO as collateral in EVRO, you can use **coGNO** (Coll
 4. **Always Up-to-Date**: Your coGNO balance automatically updates as you deposit or withdraw collateral - no manual claiming or management needed.
 
 **Why this matters:**
+
 - Keep your voice in Gnosis Chain governance while borrowing
 - No opportunity cost - your GNO works for both securing loans AND governance
 - Encourages long-term GNO holders to use EVRO
@@ -284,6 +286,7 @@ When you deposit GNO or osGNO as collateral in EVRO, you can use **coGNO** (Coll
 **Technical Note**: coGNO is a view-only ERC20 token - nothing is actually minted or transferred. The `balanceOf()` function simply queries your collateral in the protocol. This makes it gas-efficient and automatically accurate.
 
 **Contract Addresses:**
+
 - GNO coGNO: `0xc30fc573ec88d59328c0396115105298c12c861c`
 - osGNO coGNO: `0x4356908a186e477e30c34aa09208379194324ae7`
 
