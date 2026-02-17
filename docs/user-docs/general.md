@@ -31,8 +31,8 @@ All vault operations are permissionless, and all parameters are fixed at deploym
 
 ### Does EVRO have governance? <a href="#does-evro-have-governance" id="does-evro-have-governance"></a>
 
-
 EVRO will be governed through a Moloch DAO structure using the RETVRN token. This governance model is intentionally minimal, with powers limited to:
+
 - Distributing Protocol Liquidity Incentives (PLI)
 - Directing 25% of the protocol's revenue to external initiatives
 - Delegating GNO for Gnosis Chain governance
@@ -42,7 +42,7 @@ Governance will **never** be able to change the fee split, update core protocol 
 
 #### Other Helpful Resources:
 
-- **Frontend**: [evro.finance](https://app.evro.finance/)
+- **Frontend**: [app.evro.finance](https://app.evro.finance/)
 - **GitHub**: [github.com/raidguild/evro](https://github.com/evro-finance/evro)
 - **Dune Dashboard**: Coming soon
 - **Subgraph**: Coming soon
