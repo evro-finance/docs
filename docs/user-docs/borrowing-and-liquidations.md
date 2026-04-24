@@ -160,7 +160,7 @@ You can see the distribution of other users' rates in a histogram and position y
 
 ![Rate](/img/interest_rate.png)
 
-Redemptions usually occur when EVRO is trading below 1 EUR minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection. <mark>LINK TO BE UPDATED HERE</mark>&#x20;
+Redemptions usually occur when EVRO is trading below 1 EUR minus the current redemption fee. Keeping an eye on the past [redemption activity](https://dune.com/liquity/liquity-v2#redemptions) can help you assess the overall redemption risk, serving as an additional data point for your rate selection.
 
 In general, those willing to actively monitor their positions, or borrowing for shorter periods of time, may opt for lower rates. Conversely users optimizing for a more passive, long-term position would be better off with setting a higher relative interest rate.
 
