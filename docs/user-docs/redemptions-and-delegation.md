@@ -10,15 +10,13 @@ Redemptions serve the crucial purpose of keeping EVRO closely related to the val
 
 A redemption is essentially swapping EVRO for each collateral at face value, as if 1 EVRO is exactly worth 1.00 EUR. Redemptions can be initiated by anyone, but are only profitable when EVRO is less than 1 EUR.
 
-The redeemer sends EVRO to the protocol and in return gets a mix of collateral tokens redeemed (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [link](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#how-is-the-collateral-split-determined) for more info). <mark>INTERNAL LINK TO UPDATE HERE.</mark>&#x20;
+The redeemer sends EVRO to the protocol and in return gets a mix of collateral tokens redeemed (minus the redemption fee). The redeemed amount is split among the different collateral assets based on their current Stability Pool backing (see [How is the collateral split determined?](#how-is-the-collateral-split-determined) for more info).
 
-![Redeption](/img/redemption_1.png)
+![Redemption](/img/redemption_1.png)
 
-<mark>IMAGE TO UPDATE HERE</mark>\
-\
 Redemptions start from the borrower paying the least interest.
 
-Read more about how to [protect yourself](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#how-can-i-stay-protected) from redemptions and what happens if [you are redeemed](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#what-happens-if-my-trove-gets-redeemed). <mark>INTERNAL LINKS TO UPDATE HERE</mark>
+Read more about [how to stay protected](#how-can-i-stay-protected) from redemptions and [what happens if you are redeemed](#what-happens-if-my-trove-gets-redeemed).
 
 You can also watch this [9 min video](https://www.youtube.com/watch?v=CQVmjFx987A) on redemptions by the Liquidy team.
 
@@ -32,7 +30,7 @@ A redemption can occur at any time, but will likely only happen when it is profi
 
 #### Who can initiate a redemption? <a href="#who-can-initiate-a-redemption" id="who-can-initiate-a-redemption"></a>
 
-Any Ethereum address can initiate a redemption, provided that they have a sufficient amount of EVRO to do so. However, we expect redemptions to be mainly performed by professional bots rather than humans.
+Any Gnosis Chain address can initiate a redemption, provided that they have a sufficient amount of EVRO to do so. However, we expect redemptions to be mainly performed by professional bots rather than humans.
 
 #### What happens if my Trove gets redeemed? <a href="#what-happens-if-my-trove-gets-redeemed" id="what-happens-if-my-trove-gets-redeemed"></a>
 
@@ -47,7 +45,7 @@ Example with wstETH at 3000 EUR:
 
 You can see your collateral and debt reduced equally (in EUR terms) and the redemption fee (0.025 wstETH) being added to your collateral value.
 
-Partially affected Troves whose debt stays above the minimum debt threshold of 2000 EVRO continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see below for [more](https://docs.evro.finance/docs/user-docs/redemption-and-delegation#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount) info). <mark>INTERNAL LINK TO UPDATE HERE</mark>
+Partially affected Troves whose debt stays above the minimum debt threshold of 200 EVRO continue to work as before, while Troves whose debt is reduced to a lesser amount (or 0) switch to a dormant operating mode (see [more info](#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount)).
 
 #### How do redemptions work using three collateral assets? <a href="#how-do-redemptions-work-using-three-collateral-assets" id="how-do-redemptions-work-using-three-collateral-assets"></a>
 
@@ -55,11 +53,9 @@ In contrast to LUSD, EVRO is backed by a multitude of collaterals. Instead of le
 
 The process starts with the Troves paying the lowest interest rates in each collateral market and continues until the full amount of EVRO is exchanged for collateral assets. Redemptions can be partial or full, as illustrated below.
 
-<mark>In this example, the wstETH market shows a full redemption of the first Trove and a partial redemption of the second. The wstETH and ETH markets have one partial and two full redemptions, respectively UPDATE THIS TEXT TO MATCH THE UPDATED IMAGE BELOW, LET'S USE GNO RELATED EXAMPLES</mark>
+In this example, redemptions process Troves across multiple collateral markets (WXDAI, GNO, sDAI, etc.), starting with those paying the lowest interest rates in each market. The redemption may fully close some Troves or partially reduce others until the full EVRO amount is redeemed.
 
 ![Redeemer 1](/img/redemption_2.png)
-
-<mark>IMAGE TO UPDATE HERE</mark>
 
 #### How is the collateral split determined? <a href="#how-is-the-collateral-split-determined" id="how-is-the-collateral-split-determined"></a>
 
@@ -67,11 +63,9 @@ The split is dynamic, optimizing for the economic safety of the system. The logi
 
 To mitigate this risk, the system redeems proportionally to the "outside debt" of each collateral type. This is calculated as the total debt borrowed against a specific collateral minus the size of the Stability Pool for that borrowing market.
 
-Here is an example: given outside debt amounts of 100 EVRO, 50 EVRO and 100 EVRO respectively, a redemption will result in a <mark>40% (WETH), 20% (wstETH) and 40% (rETH) split. ELECT WHICH COLLATERALS TO USE HERE</mark>
+Here is an example: given outside debt amounts of 100 EVRO (WXDAI), 50 EVRO (GNO), and 100 EVRO (osGNO) respectively, a redemption will result in a 40% WXDAI, 20% GNO, and 40% osGNO split.
 
 ![Redeemer 2](/img/redemption_3.png)
-
-<mark>IMAGE TO UPDATE HERE</mark>
 
 #### Is there a redemption fee? <a href="#is-there-a-redemption-fee" id="is-there-a-redemption-fee"></a>
 
@@ -85,21 +79,13 @@ The redemption fee percentage is given by `min (0.5% + baseRate, 100%)`.
 
 <figure><img src="/img/dune_dashboard.png" alt="" /><figcaption><p>The redemption fee (red line) follows this dynamic over time as redemptions occur (blue bars).</p></figcaption></figure>
 
-<mark>IMAGE DOESN'T NEED FULL UPDATE, BUT PUTTING SOME BRANDING ON IT WOULD BE NICE</mark>
-
 #### How can I stay protected? <a href="#how-can-i-stay-protected" id="how-can-i-stay-protected"></a>
 
 The risk of redemption depends on two factors: the interest rate you set and the price of EVRO at any given time.
 
 **The interest rate** you set determines how much EVRO must be redeemed before it's your turn. The higher your rate, the more EVRO is redeemable before you, and vice versa.
 
-You can see this in the frontend, in the example below the number is 352k
-
-![Rate](/img/interest_rate.png)
-
-<mark>IMAGE TO UPDATE HERE - we don't have rate management</mark>\
-\
-This means that <mark>352k EVRO match this to whatever we have on the image</mark> must be removed from the system before it would reach you. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
+You can see your position in the redemption queue in the frontend based on your interest rate. The higher your interest rate, the more EVRO debt sits "in front of you" protecting you from redemptions. However, this number is relative, and you also need to consider recent redemption activity. While past events don't guarantee future outcomes, they can serve as a useful guide.
 
 For example, if only 100K EVRO were redeemed in the last week, you're comparatively safer than if 1M were redeemed.
 
@@ -125,43 +111,38 @@ So, in Liquity the `borrower_loss = redemption_fee + redeemer_gain`, while in EV
 
 #### What happens when redemptions cause a debt of a Trove to fall below the minimum amount? <a href="#what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount" id="what-happens-when-redemptions-cause-a-debt-of-a-trove-to-fall-below-the-minimum-amount"></a>
 
-If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 EVRO debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow again to bring its debt above the minimum of 2000 EVRO, topping up its collateral if needed.
+If the redeemed amount exceeds the debt of an affected Trove, it doesn't get closed as in Liquity V1, but remains open with 0 EVRO debt and the remaining collateral. The owner of a fully redeemed Trove may close it by withdrawing the remaining collateral, or borrow again to bring its debt above the minimum of 200 EVRO, topping up its collateral if needed.
 
-In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 2000 EVRO, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
+In the scenario that the redeemed amount of a Trove does not exceed the debt of a Trove, but would leave it between 0 and 200 EVRO, the Trove would remain open with the remaining debt, and the remaining collateral. The owner of the Trove may close it by paying off the remaining debt and withdrawing the remaining collateral, or borrow anew as described above.
 
 #### How to redeem EVRO for collateral using [Gnosis Scan](https://gnosisscan.io/) <a href="#how-to-redeem-usnd-for-collateral-mix-of-eth-reth-and-wsteth-using-etherscan" id="how-to-redeem-usnd-for-collateral-mix-of-eth-reth-and-wsteth-using-etherscan"></a>
 
 **Step 1**
 
-To redeem EVRO you first have to give the CollateralRegistry contract an approval to use your EVRO using the approve() function of the EVRO <mark>token contract. Let's be badasses and link this for practicality</mark>
+To redeem EVRO you first have to give the CollateralRegistry contract an approval to use your EVRO using the approve() function of the [EVRO token contract](https://gnosisscan.io/address/0xde7515ac950cd4c5ac6afff16bc17d00221d504e#writeContract).
 
-After connecting your wallet through "Connect to Web3", set\
-spender to `CollateralRegistry address`and the amount to be at least as high as the amount you wish to redeem, adding 18 zeros.
+After connecting your wallet through "Connect to Web3", set:
+- `spender` to `0x66ad60d99f42575b63a337ddb2998ea617734fb7` (CollateralRegistry address)
+- `amount` to at least as high as the amount you wish to redeem, adding 18 zeros
 
 **Example for 1000 EVRO:**
 
 ![](/img/approve.png)
 
-<mark>IMAGE TO UPDATE HERE - Let's be cool and have the actual address + brand it nice and cute</mark>\
-\
-**Step 2**\
-You can now redeem EVRO using the `CollateralRegistry` contract:
+**Step 2**
 
-[<mark>(insert CollateralRegistry address after deployment)</mark>](https://docs.evro.finance/docs/user-docs/redemption-and-delegation) <mark>INTERNAL LINK TO UPDATE HERE</mark>\
+You can now redeem EVRO using the [CollateralRegistry contract](https://gnosisscan.io/address/0x66ad60d99f42575b63a337ddb2998ea617734fb7#writeContract).
+
 Simply input the EVRO amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
 
 Note: The redemption fee must be higher than the current fee.
 
 **Example**
 
-`_boldAmount:` amount to redeem \* 1e18
+`_evroAmount:` amount to redeem × 1e18 (e.g., for 1000 EVRO: 1000000000000000000000)
 
 `_maxIterationsPerCollateral:` 0
 
-`_maxFeePercentage:` 1% \* 1e16, i.e. 1000000000000000000\
-\
-<mark>CODE TEXT HERE MENTIONS BOLD - I IMAGINE WE HAVE TO CHANGE IT</mark>
+`_maxFeePercentage:` 1% × 1e16, i.e. 10000000000000000
 
 ![](/img/redeem.png)
-
-<mark>IMAGE TO UPDATE HERE - Let's be cool and have the actual NAMES + brand it nice and cute</mark>

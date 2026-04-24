@@ -12,18 +12,18 @@ Evro is a decentralized borrowing protocol that issues a euro-denominated stable
 
 #### Accepted Collateral:&#x20;
 
-- xDAI &#x20;
-- sDAI
+- WXDAI (Wrapped xDAI)
+- sDAI (Savings DAI)
 - GNO
 - osGNO (Stakewise Staked GNO)&#x20;
 - wBTC&#x20;
-- wstETH
+- wstETH (Wrapped Staked ETH)
 
 #### On Evro.finance users can: <a href="#the-main-use-cases-for-evro-are" id="the-main-use-cases-for-evro-are"></a>
 
-- Borrow EVRO
-- Earn yield by depositing EVRO in the stability pool or farming elsewhere
-- Stake GVRO to direct PLI (Protocol Liquidity Incentives) and earn rewards
+- Borrow EVRO against accepted collateral
+- Earn yield by depositing EVRO in the Stability Pool
+- Stake RETVRN to direct PLI (Protocol Liquidity Incentives) and earn rewards (coming soon)
 
 Users lock approved collateral, open a vault, and mint EVRO against that position.
 
@@ -31,8 +31,18 @@ All vault operations are permissionless, and all parameters are fixed at deploym
 
 ### Does EVRO have governance? <a href="#does-evro-have-governance" id="does-evro-have-governance"></a>
 
-Evro is subject to minimal governance which is solely tasked with distributing Protocol Liquidity Incentives (PIL), directing 25% of the protocol's revenue to external initiatives, delegating GNO, and updating collateral debt limits. Governance can never change the fee split, update protocol parameters, mint new stablecoins, or anything else.
+EVRO will be governed through a Moloch DAO structure using the RETVRN token. This governance model is intentionally minimal, with powers limited to:
+
+- Distributing Protocol Liquidity Incentives (PLI)
+- Directing 25% of the protocol's revenue to external initiatives
+- Delegating GNO for Gnosis Chain governance
+- Updating collateral debt limits
+
+Governance will **never** be able to change the fee split, update core protocol parameters, mint new stablecoins, or otherwise compromise the protocol's immutability. See the [RETVRN Staking & Voting](/docs/user-docs/retvrn-staking-and-voting) page for more details.
 
 #### Other Helpful Resources:
 
-Dune Dashboard: https://dune.com/evro (upcoming)&#x20;
+- **Frontend**: [app.evro.finance](https://app.evro.finance/)
+- **GitHub**: [github.com/raidguild/evro](https://github.com/evro-finance/evro)
+- **Dune Dashboard**: Coming soon
+- **Subgraph**: Coming soon

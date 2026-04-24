@@ -4,38 +4,91 @@ sidebar_position: 4
 
 # Risk Disclosure
 
-<mark>THIS ENTIRE PAGE WILL NEED A FULL REWRITE FROM TECHNICAL TEAM MEMBERS</mark>
-
 ## Audits & Risk Disclosure
 
-Detailed disclosures of protocol risks and user considerations. EVRO code has been audited several times by top firms.
+EVRO is a fork of Liquity v2 (BOLD), inheriting its battle-tested security model. The underlying Liquity v2 contracts have been extensively audited by leading security firms. EVRO-specific modifications have undergone additional security review.
 
 ### Contract Risk <a href="#contract-risk" id="contract-risk"></a>
 
-Underlying Liquity contracts are audited and secure. EVRO Protocol is a fork of Liquity and inherits most of the same risks and security considerations, but with several differences.
+#### Liquity v2 Base Protocol Audits
 
-EVRO protocol contracts (and all changes from the Liquity core contracts) are audited by Sherlock, <mark>0xSimao and other independent auditors.</mark>
+EVRO is built on Liquity v2, which has been audited by:
 
-EVRO audits:
+- **ChainSecurity** - Multiple audits (Aug 2024 - May 2025)
+- **Dedaub** - Three comprehensive audits (Aug 2024, Nov 2024, Dec 2024)
+- **Certora** - Formal verification (Dec 2024)
+- **Coinspect** - Core protocol and governance audits (Dec 2024, Jan 2025)
+- **Cantina** - Bug bounty competition (Mar-Apr 2025)
+- **Chaos Labs** - Mechanism design review (Oct 2024)
 
-- [Report: Sherlock audit with 0xSimao](https://drive.google.com/file/d/1knlIgoEGv5x33n9mhTLRqJe8T55r3HCy/view?usp=sharing) <mark>UPDATE THIS LINK</mark>
-- EVRO also underwent extensive testing with automated vulnerability <mark>testing with</mark> [<mark>Octane</mark>](https://octane.security/)<mark>, with reports available for each pull request on our Github. UPDATE THIS</mark>
+For full audit reports, see the [Technical Docs & Audits](./technical-docs-and-audits.md) page.
+
+#### EVRO-Specific Security
+
+EVRO modifications focus on:
+- EUR denomination instead of USD
+- Gnosis Chain deployment
+- Gnosis-native collateral types (GNO, osGNO, sDAI, wstETH bridged)
+- API3 OEV oracle integration
+
+**Note**: While EVRO inherits Liquity v2's security properties, users should understand that:
+- EVRO contracts are immutable and cannot be upgraded
+- The protocol has undergone independent security review
+- Smart contract risk always exists - never invest more than you can afford to lose
 
 ### Centralization Risk <a href="#centralization-risk" id="centralization-risk"></a>
 
 #### EVRO Governance <a href="#evro-governance" id="evro-governance"></a>
 
-EVRO Protocol is designed to be as limited, decentralized, and immutable as possible. The only parameters in the protocol which can be updated or changed by EVRO governance are:
+EVRO Protocol is designed to be minimally governed, decentralized, and immutable. The **only** parameters that EVRO governance can modify are:
 
-1. Debt limits for each collateral type, which can be lowered at any time but only raised by a factor of 2x with a 7 day timelock.
-2. How to direct 25% of protocol revenue.
+1. **Debt limits** for each collateral type:
+   - Can be lowered to zero at any time (emergency shutdown)
+   - Can only be raised up to initial limit or 2x current limit
+2. **Protocol revenue allocation**: Direction of 25% of protocol revenue to initiatives
+3. **GNO delegation**: Delegation of accumulated GNO from osGNO collateral
+4. **Collateral debt limit updates**: Adjust borrowing capacity per collateral
 
-New collateral types can NOT be added by EVRO governance. EVRO can NEVER be minted by EVRO governance. The percentage of fees that are directed to the stability pool can NOT be changed by EVRO governance.
+**Governance CANNOT:**
+- Add new collateral types
+- Mint EVRO tokens
+- Change interest rates or fee structures
+- Modify liquidation parameters (MCR, CCR, etc.)
+- Change the 75/25 fee split to Stability Pool
+- Upgrade or modify core protocol contracts
 
-#### <mark>Arbitrum Network</mark> <a href="#arbitrum-network" id="arbitrum-network"></a>
+#### Gnosis Chain Network <a href="#gnosis-chain-network" id="gnosis-chain-network"></a>
 
-<mark>Arbitrum is a decentralized network, but still relies on an emergency upgrade mechanism. For more information on this, see the</mark> [<mark>L2 Beat</mark>](https://l2beat.com/scaling/projects/arbitrum) <mark>tracker for Arbitrum decentralization. UPDATE TO GNOSIS CHAIN</mark>
+EVRO operates on Gnosis Chain, a community-owned, credibly neutral network secured by over 200,000 validators. Gnosis Chain uses:
+- **Consensus**: Proof of Stake with diverse validator set
+- **Governance**: GnosisDAO controls protocol upgrades
+- **Bridge risk**: Canonical bridge from Ethereum for wstETH and wBTC
+
+For more on Gnosis Chain decentralization, see [Gnosis Chain documentation](https://docs.gnosischain.com/).
 
 #### Collaterals <a href="#collaterals" id="collaterals"></a>
 
-It is possible that some collateral tokens could be upgraded by respective DAOs or groups in the future. Conservative debt limits and over-collateralization ratios have been chosen to limit risks of this posing any issues.
+EVRO accepts multiple collateral types on Gnosis Chain:
+- **WXDAI**: Wrapped xDAI, native gas token
+- **GNO**: Gnosis DAO governance token
+- **sDAI**: Savings DAI from Spark Protocol
+- **osGNO**: Stakewise staked GNO (liquid staking derivative)
+- **wWBTC**: Wrapped Bitcoin bridged to Gnosis
+- **wstETH**: Wrapped staked ETH bridged to Gnosis
+
+**Collateral Risks:**
+- Some collaterals (osGNO, sDAI) may be upgradeable by their respective protocols
+- Bridged assets (wstETH, wWBTC) carry bridge risk
+- Conservative debt limits and over-collateralization ratios mitigate these risks
+- In case of collateral failure, EVRO may become undercollateralized
+
+### Oracle Risk <a href="#oracle-risk" id="oracle-risk"></a>
+
+EVRO uses API3's OEV (Oracle Extractable Value) oracles as the primary price feed, with Chainlink as backup for certain feeds. Oracle failures or manipulation could lead to incorrect liquidations or prevent proper system operation.
+
+### Market Risk <a href="#market-risk" id="market-risk"></a>
+
+- **Redemptions**: Borrowers with lowest interest rates face redemption risk when EVRO trades below €1
+- **Liquidations**: Borrowers must maintain adequate collateral ratios or face liquidation
+- **Interest rates**: User-set rates create market dynamics - rates may fluctuate based on supply/demand
+- **Peg stability**: EVRO aims to maintain a €1 peg but may deviate during extreme market conditions
