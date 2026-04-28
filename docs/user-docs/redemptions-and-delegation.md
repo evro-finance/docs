@@ -119,10 +119,10 @@ In the scenario that the redeemed amount of a Trove does not exceed the debt of 
 
 **Step 1**
 
-To redeem EVRO you first have to give the CollateralRegistry contract an approval to use your EVRO using the approve() function of the [EVRO token contract](https://gnosisscan.io/address/0xde7515ac950cd4c5ac6afff16bc17d00221d504e#writeContract).
+To redeem EVRO you first have to give the CollateralRegistry contract an approval to use your EVRO using the approve() function of the [EVRO token contract](https://gnosisscan.io/address/0xdaca5f19e7a33277dc7477067f200ea735dc6982#writeContract).
 
 After connecting your wallet through "Connect to Web3", set:
-- `spender` to `0x66ad60d99f42575b63a337ddb2998ea617734fb7` (CollateralRegistry address)
+- `spender` to `0x9ae5b0cf832391040af0873c97c4bb4b9a397680` (CollateralRegistry address)
 - `amount` to at least as high as the amount you wish to redeem, adding 18 zeros
 
 **Example for 1000 EVRO:**
@@ -131,7 +131,7 @@ After connecting your wallet through "Connect to Web3", set:
 
 **Step 2**
 
-You can now redeem EVRO using the [CollateralRegistry contract](https://gnosisscan.io/address/0x66ad60d99f42575b63a337ddb2998ea617734fb7#writeContract).
+You can now redeem EVRO using the [CollateralRegistry contract](https://gnosisscan.io/address/0x9ae5b0cf832391040af0873c97c4bb4b9a397680#writeContract).
 
 Simply input the EVRO amount to redeem, the redemption fee percentage you are willing to accept and the maximum number of list iterations per collateral (limits the number of troves whose debt can be repaid on each branch).
 
