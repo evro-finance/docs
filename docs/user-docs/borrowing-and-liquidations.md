@@ -249,9 +249,9 @@ EVRO uses a special wrapper contract for wBTC to handle the decimal conversion b
 
 2. **Withdrawals**: When you withdraw or get liquidated, the protocol automatically unwraps back to standard 8-decimal wBTC that you receive in your wallet.
 
-3. **Seamless Integration**: The wrapper contract (`wbtcWrapper` at `0x92e79ddea8307d54f7648bfea879a819daa97d13`) is also the collateral token address for the wBTC branch, making this conversion completely transparent to users.
+3. **Seamless Integration**: The wrapper contract (`wbtcWrapper` at `0xcfa17d000980085f13ae66beb68a3fee48fab8ec`) is also the collateral token address for the wBTC branch, making this conversion completely transparent to users.
 
-4. **Zapper Contract**: The `wbtcZapper` (`0x5c77c09701b8c450d14c29d932280311935f5299`) provides additional convenience functions for one-transaction operations like opening a Trove and borrowing in a single step.
+4. **Zapper Contract**: The `wbtcZapper` (`0xdf5f4c29187f3ef222b6a734ef1d2860a43e9585`) provides additional convenience functions for one-transaction operations like opening a Trove and borrowing in a single step.
 
 **Why this matters:**
 
@@ -287,7 +287,7 @@ When you deposit GNO or osGNO as collateral in EVRO, you can use **coGNO** (Coll
 
 **Contract Addresses:**
 
-- GNO coGNO: `0xc30fc573ec88d59328c0396115105298c12c861c`
-- osGNO coGNO: `0x4356908a186e477e30c34aa09208379194324ae7`
+- GNO coGNO: `0x25c9f20fbb313f4138a0f156ee4120fa87d81b6b`
+- osGNO coGNO: `0xde00fcf678bc7220964879552ea9e9679f227e5f`
 
 For technical implementation details, see the [Technical Docs](/docs/technical-docs/technical-docs-and-audits#cogno-implementation).
